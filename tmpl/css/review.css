@@ -1,0 +1,35 @@
+/* COMMON */
+.dc-ca-description{
+    margin: 25px auto 25px auto;
+    max-width: 700px;
+}
+
+/* REVIEWS */
+.dc-ca-review-name{
+    padding: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-radius:7px;
+    text-align: center !important;
+}
+.dc-ca-review-inner{
+    border-radius:15px;
+}
+.dc-ca-review-image{
+    text-align: center;
+}
+.dc-ca-review-image img {
+    width: 160px !important;
+    height: 160px !important;
+    max-width: 100%;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 5px solid #000;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.dc-ca-quote-icon img{
+    max-width: 40px;
+    height: auto;
+}

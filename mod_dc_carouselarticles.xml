@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="5.0" client="site" method="upgrade">
+    <name>mod_dc_carouselarticles</name>
+    <title>DC CarouselArticles</title>
+    <author>Design Cart</author>
+    <version>1.0.0</version>
+	<license>http://www.gnu.org/licenses/gpl-3.0.html</license>
+    <description>MOD_DC_CAROUSELARTICLES_DESC</description>
+    <languages>
+        <language tag="en-GB">language/en-GB/en-GB.mod_dc_carouselarticles.ini</language>
+        <language tag="en-GB">language/en-GB/en-GB.mod_dc_carouselarticles.sys.ini</language>
+    </languages>
+	<updateservers>
+		<server type="extension" name="mod_dc_carouselarticles Update Server">https://www.designcart.pl/download/updates/update_mod_dc_carouselarticles.xml</server>
+	</updateservers>
+    <config>
+        <fields name="params">
+            <fieldset name="basic" label="MOD_DC_CAROUSELARTICLES_FIELDSET_BASIC">
+                <field name="heading" type="text" label="MOD_DC_CAROUSELARTICLES_HEADING" />
+                <field name="heading_tag" type="list" default="h3" label="MOD_DC_CAROUSELARTICLES_HEADING_TAG">
+                    <option value="h1">h1</option>
+                    <option value="h2">h2</option>
+                    <option value="h3">h3</option>
+                    <option value="h4">h4</option>
+                    <option value="h5">h5</option>
+                    <option value="h6">h6</option>
+                </field>
+                
+                <field name="catids" type="category" extension="com_content" multiple="true" label="MOD_DC_CAROUSELARTICLES_CATIDS" description="MOD_DC_CAROUSELARTICLES_CATIDS_DESC" />
+                <field name="limit" type="number" default="5" label="MOD_DC_CAROUSELARTICLES_LIMIT" />
+                <field name="visible" type="number" default="3" label="MOD_DC_CAROUSELARTICLES_VISIBLE" />
+                <field name="template" type="list" label="MOD_DC_CAROUSELARTICLES_TEMPLATE">
+                    <option value="article">MOD_DC_CAROUSELARTICLES_OP_ARTICLE</option>
+                    <option value="review">MOD_DC_CAROUSELARTICLES_OP_REVIEW</option>
+                    <option value="portfolio">MOD_DC_CAROUSELARTICLES_OP_PORTFOLIO</option>
+                </field>
+                <field name="description" type="editor" label="MOD_DC_CAROUSELARTICLES_DESCRIPTION" />
+            </fieldset>
+            <fieldset name="design" label="MOD_DC_CAROUSELARTICLES_FIELDSET_DESIGN">
+                <field name="heading_color" type="color" default="#000000" label="MOD_DC_CAROUSELARTICLES_HEADING_COLOR" />
+                <field name="heading_font_size" type="text" default="36" label="MOD_DC_CAROUSELARTICLES_HEADING_FONT_SIZE" />
+                <field name="description_color" type="color" default="#000000" label="MOD_DC_CAROUSELARTICLES_DESCRIPTION_COLOR" />
+                <field name="description_font_size" type="text" default="18px" label="MOD_DC_CAROUSELARTICLES_DESCRIPTION_FONT_SIZE" />
+                <field name="bg_color" type="color" default="#efefef" label="MOD_DC_CAROUSELARTICLES_BG_COLOR" />
+                <field name="text_color" type="color" default="#000000" label="MOD_DC_CAROUSELARTICLES_TEXT_COLOR" />
+                <field name="title_bg_color" type="color" default="#1ba6cb" label="MOD_DC_CAROUSELARTICLES_TITLE_BG_COLOR" />
+                <field name="title_text_color" type="color" default="#ffffff" label="MOD_DC_CAROUSELARTICLES_TITLE_TEXT_COLOR" />
+                <field name="quote_top_color" type="color" default="#262c38"  label="MOD_DC_CAROUSELARTICLES_QUOTE_TOP_COLOR" />
+                <field name="quote_bottom_color" type="color" default="#262c38" label="MOD_DC_CAROUSELARTICLES_QUOTE_BOTTOM_COLOR" />
+                <field name="prev_bg_color" type="color" default="#ffeb00" label="MOD_DC_CAROUSELARTICLES_PREV_BG_COLOR" />
+                <field name="next_bg_color" type="color" default="#20a08f" label="MOD_DC_CAROUSELARTICLES_NEXT_BG_COLOR" />
+                <field name="prev_text_color" type="color" default="#000000" label="MOD_DC_CAROUSELARTICLES_PREV_TEXT_COLOR" />
+                <field name="next_text_color" type="color" default="#ffffff" label="MOD_DC_CAROUSELARTICLES_NEXT_TEXT_COLOR" />
+                <field name="title_font_size" type="text" default="18" label="MOD_DC_CAROUSELARTICLES_TITLE_FONT_SIZE" />
+                <field name="text_font_size" type="text" default="14" label="MOD_DC_CAROUSELARTICLES_TEXT_FONT_SIZE" />
+                <field name="info_color" type="color" default="#888888" label="MOD_DC_CAROUSELARTICLES_INFO_COLOR" />
+                <field name="info_font_size" type="text" default="12" label="MOD_DC_CAROUSELARTICLES_INFO_FONT_SIZE" />
+                <field name="more_bg_color" type="color" default="#1ba6cb" label="MOD_DC_CAROUSELARTICLES_MORE_BG_COLOR" />
+                <field name="more_text_color" type="color" default="#ffffff" label="MOD_DC_CAROUSELARTICLES_MORE_TEXT_COLOR" />
+                <field name="more_bg_color_hover" type="color" default="#20a08f" label="MOD_DC_CAROUSELARTICLES_MORE_BG_COLOR_HOVER" />
+                <field name="more_text_color_hover" type="color" default="#ffffff" label="MOD_DC_CAROUSELARTICLES_MORE_TEXT_COLOR_HOVER" />
+
+                <field name="more_font_size" type="text" default="14" label="MOD_DC_CAROUSELARTICLES_MORE_FONT_SIZE" />
+                <field name="more_text" type="text" label="MOD_DC_CAROUSELARTICLES_MORE_TEXT" />
+                
+                <field name="show_date" type="radio" default="1" label="MOD_DC_CAROUSELARTICLES_SHOW_DATE">
+                    <option value="1">MOD_DC_CAROUSELARTICLES_OPTION_YES</option>
+                    <option value="0">MOD_DC_CAROUSELARTICLES_OPTION_NO</option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+    <files>
+        <filename module="mod_dc_carouselarticles">mod_dc_carouselarticles.php</filename>
+        <folder>tmpl</folder>
+        <folder>language</folder>
+	    <folder>tmpl/img</folder>
+        <folder>tmpl/css</folder>
+    </files>
+</extension>
